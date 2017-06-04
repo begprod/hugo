@@ -1,0 +1,32 @@
+.featured-music
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-around
+	align-self: flex-start
+	align-content: center
+	&__unit
+		width: 50%
+		min-height: 480px
+		height: auto
+		padding: 140px
+		border: 1px solid red
+		background-size: cover
+		background-position: top center
+		background-repeat: no-repeat
+		transition: all .3s ease-in-out
+		&:hover
+			background-color: $lightGray
+	&__inner
+		text-align: left
+	&__head
+		font-size: 48px
+		font-weight: 100
+		margin: 0 0 25px 0
+	&__text
+		width: 80%
+		line-height: 30px
+		font-size: 18px
+		font-weight: 100
+		p
+			margin: 0

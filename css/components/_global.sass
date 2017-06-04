@@ -1,0 +1,34 @@
+html
+    box-sizing: border-box
+
+*,
+*::after,
+*::before
+    box-sizing: inherit
+
+body
+    font-family: $mainFont
+a
+    color: $lightBlue
+.wrapper
+    width: 1200px
+    margin: 0 auto
+
+
+// grid layout
+.grid
+    display: grid
+    grid-template-areas: 'header' 'hero' 'featured-music' 'timer' 'insta' 'footer'
+
+.header
+    grid-area: header
+.hero
+    grid-area: hero
+.featured-music
+    grid-area: featured-music
+.timer
+    grid-area: timer
+.insta
+    grid-area: insta
+.footer
+    grid-area: footer
