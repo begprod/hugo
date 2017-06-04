@@ -10,13 +10,47 @@
 		min-height: 480px
 		height: auto
 		padding: 140px
-		border: 1px solid red
-		background-size: cover
-		background-position: top center
-		background-repeat: no-repeat
 		transition: all .3s ease-in-out
+		background-position: top center
+		+bg-overlay
 		&:hover
 			background-color: $lightGray
+		&--video
+			position: relative
+			background-position: center
+			opacity: .7
+			cursor: pointer
+			+bg-overlay
+			&:hover
+				opacity: 1
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				margin: 0 auto
+				top: 50%
+				display: inline-block
+				width: 100px
+				height: 60px
+				background-image: url('../../images/video-play-btn.png')
+				+bg-overlay
+		&--album
+			position: relative
+			&:hover::after
+				opacity: .7
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				left: 0
+				bottom: 0
+				width: 100%
+				height: 100%
+				background-color: $darkBlue
+				transition: all .3s ease-in-out
+				opacity: .9
 	&__inner
 		text-align: left
 	&__head
@@ -30,3 +64,32 @@
 		font-weight: 100
 		p
 			margin: 0
+			color: $darkGray
+	&__current-albm
+		position: relative
+		display: inline-block
+		cursor: pointer
+		&:hover::after
+			right: -150px
+		img
+			position: relative
+			z-index: 2
+		&::after
+			z-index: 1
+			content: ''
+			position: absolute
+			right: -100px
+			top: 0
+			display: inline-block
+			width: 70%
+			height: 100%
+			transition: all .3s ease-in-out
+			background-image: url('../../images/disc.png')
+			background-repeat: no-repeat
+			background-position: right top
+.social-link--text-link
+	justify-content: initial
+	a
+		color: $darkGray
+		font-weight: 100
+		text-decoration: none
