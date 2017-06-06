@@ -16,11 +16,20 @@ function createBgfromAlbum() {
 
 
 function countDownTimer() {
-	var timerElement = $('.timer');
-	var place = 'Red Square, Russia, Moscow';
+	var daysEl = $('.timer__days');
+	var hoursEl = $('.timer__hours');
+	var minutesEl = $('.timer__minutes');
+	var secondsEl = $('.timer__seconds');
+	var dateEl = $('.js-date');
+	var placeEl = $('.js-place');
+	var place = 'Red Square, Moscow, Russia.';
 	var date = 'Jun 9, 2017 18:00:00';
-	var countDownDate = new Date(date).getTime();
 
+	dateEl.text(date);
+	placeEl.text(place);
+
+
+	var countDownDate = new Date(date).getTime();
 	var timer = setInterval(function() {
 		var currentTime = new Date().getTime();
 
@@ -31,7 +40,9 @@ function countDownTimer() {
 		var minutes = Math.floor((timeDistance % (1000 * 60 * 60)) / (1000 * 60));
 		var seconds = Math.floor((timeDistance % (1000 * 60)) / 1000);
 
-
-		timerElement.text(days + ' ' + hours + ' ' + minutes + ' ' + seconds);
+		daysEl.text(days);
+		hoursEl.text(hours);
+		minutesEl.text(minutes);
+		secondsEl.text(seconds);
 	}, 1000);
 }
