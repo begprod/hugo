@@ -1,1 +1,1 @@
-# hugo landing page
+# Hugo landing page template
