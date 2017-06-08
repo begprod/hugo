@@ -2,6 +2,7 @@ $(document).ready(function() {
     console.log('Alive!!!');
     createBgfromAlbum();
 	countDownTimer();
+	getPhotoData();
 });
 
 
@@ -45,4 +46,19 @@ function countDownTimer() {
 		minutesEl.text(minutes);
 		secondsEl.text(seconds);
 	}, 1000);
+}
+
+
+
+function getPhotoData() {
+	var photoBlock = $('.insta');
+	$.getJSON('../photo-data.json', function(data) {
+			for(var i = 0; i < 12; i++) {
+				console.log(data[i].url);
+				photoBlock.append(
+					'<div class="insta__unit">' + '<img src="' + data[i].url + '">' + '</div>'
+				)
+			}
+		}
+	);
 }
