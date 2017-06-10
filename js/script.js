@@ -56,7 +56,8 @@ function getPhotoData() {
 			for(var i = 0; i < 12; i++) {
 				console.log(data[i].url);
 				photoBlock.append(
-					'<div class="insta__unit">' + '<img src="' + data[i].url + '" alt="' + data[i].title + '">' + '</div>'
+					// '<div class="insta__unit">' + '<img src="' + data[i].url + '" alt="' + data[i].title + '">' + '</div>'
+					'<div class="insta__unit" style="background-image:url('+ data[i].url +')"></div>'
 				);
 			}
 		}
