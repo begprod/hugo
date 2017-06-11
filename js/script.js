@@ -1,12 +1,17 @@
 $(document).ready(function() {
     console.log('Alive!!!');
+	activeMenu();
     createBgfromAlbum();
 	countDownTimer();
 	getPhotoData();
 });
 
 
-
+function activeMenu() {
+	$('.header__menu').click(function() {
+		$('.menu').toggleClass('menu--active');
+	});
+}
 
 function createBgfromAlbum() {
     var albumCoverImg = $('.featured-music__current-albm img');
@@ -54,7 +59,7 @@ function getPhotoData() {
 	var photoBlock = $('.insta');
 	$.getJSON('../photo-data.json', function(data) {
 			for(var i = 0; i < 12; i++) {
-				console.log(data[i].url);
+				//console.log(data[i].url);
 				photoBlock.append(
 					// '<div class="insta__unit">' + '<img src="' + data[i].url + '" alt="' + data[i].title + '">' + '</div>'
 					'<div class="insta__unit" style="background-image:url('+ data[i].url +')"></div>'

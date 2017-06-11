@@ -19,6 +19,50 @@ a
 .wrapper
     width: 1200px
     margin: 0 auto
+.social-links
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	align-items: center
+	align-content: center
+	&__unit
+		margin-right: 30px
+		cursor: pointer
+		&:last-child
+			margin-right: 0
+		a
+			color: black
+	&--lightgray
+		a
+			color: $darkGray
+.menu
+    position: absolute
+    right: -100%
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: flex-start
+    width: 90%
+    transition: all .3s ease-in-out
+    &__wrapper
+        display: flex
+        flex-direction: row
+        align-self: center
+        align-items: flex-start
+        justify-content: space-around
+        width: 100%
+        margin: 5px 0 0 0;
+        list-style: none
+    &__unit
+    &__link
+        text-decoration: none
+        text-transform: uppercase
+        color: $darkGray
+        transition: all .3s ease-in-out
+        &:hover
+            color: $lightBlue
+    &--active
+        right: 50px
 // grid layout
 .grid
     display: grid
