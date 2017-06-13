@@ -4,6 +4,7 @@ $(document).ready(function() {
     createBgfromAlbum();
 	countDownTimer();
 	getPhotoData();
+	upBtn();
 });
 
 
@@ -67,4 +68,21 @@ function getPhotoData() {
 			}
 		}
 	);
+}
+
+function upBtn() {
+	var scrollBtn = $('.up-btn');
+	var bodyHtml = $('body, html');
+	scrollBtn.click(function (event) {
+		bodyHtml.animate({ scrollTop: 0 }, 400);
+		return false;
+	});
+
+	$(window).scroll(function () {
+		if ($(document).scrollTop() > 400) {
+			scrollBtn.fadeIn(300);
+		} else {
+			scrollBtn.fadeOut(300);
+		}
+	});
 }

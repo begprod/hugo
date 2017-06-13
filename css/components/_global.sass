@@ -37,7 +37,7 @@ a
 			color: $darkGray
 .menu
     position: absolute
-    right: -100%
+    right: -1000%
     display: flex
     flex-direction: row
     align-items: flex-start
@@ -63,11 +63,24 @@ a
             color: $lightBlue
     &--active
         right: 50px
+.up-btn
+    display: none
+    position: fixed
+    right: 30px
+    bottom: 50px
+    width: 50px
+    height: 50px
+    line-height: 50px
+    text-align: center
+    border-radius: 50%
+    background-color: white
+    box-shadow: 0 3px 4px $darkGray
+    cursor: pointer
+
 // grid layout
 .grid
     display: grid
     grid-template-areas: 'header' 'hero' 'featured-music' 'timer' 'insta' 'footer'
-
 .header
     grid-area: header
 .hero
