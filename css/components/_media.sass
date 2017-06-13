@@ -1,0 +1,116 @@
+@media screen and (max-width: $break-lg)
+	.grid
+		overflow: hidden
+	.wrapper
+		width: 95%
+	.social-links--text-link
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+@media screen and (max-width: $break-md)
+	.hero
+		flex-direction: row
+		height: 600px
+		&__text
+			max-width: 90%
+		&__down-link
+			display: noneed
+	.featured-music
+		flex-direction: column
+		&__unit
+			width: 100%
+			padding: 100px
+			&:nth-child(3)
+				order: 4
+			&:nth-child(4)
+				order: 3
+	.social-links--text-link
+		flex-direction: row
+	.timer
+		.wrapper
+			flex-direction: column
+			align-items: center
+			margin: 0
+		&__place
+			text-align: center
+			margin-bottom: 25px
+	.insta__unit
+		width: 33.33%
+	.footer
+		padding: 30px 0
+		background-color: $lightGray
+		.wrapper
+			flex-direction: column
+			align-items: center
+		&__left
+			flex-direction: column
+			align-items: center
+		&__logo
+			margin: 0 0 25px 0
+		&__copyright
+			margin: 0 0 25px 0
+	//menu
+	.header
+		&__menu
+			position: initial
+	.menu
+		top: -1000%
+		left: 0
+		right: 0
+		width: 100%
+		height: 50px
+		margin: 0 auto
+		overflow: hidden
+		background-color: $lightGray
+		&__wrapper
+			align-items: center
+			justify-content: space-around
+			margin: 0
+			padding: 0
+		&--active
+			top: 90%
+@media screen and (max-width: $break-sm)
+	.featured-music
+		&__unit
+			padding: 100px 40px
+			overflow: hidden
+	.timer
+		&__unit
+			min-width: 100px
+	.insta
+		&__unit
+			width: 50%
+			height: 150px
+	.menu
+		padding: 15px 0
+		height: auto
+		&__wrapper
+			flex-direction: column
+		&__unit
+			margin: 10px 0
+@media screen and (max-width: $break-xs)
+	.header
+		&__social-links
+			display: none
+	.hero
+		height: 400px
+	.featured-music
+		&__unit
+			padding: 100px 15px
+			overflow: hidden
+	.timer
+		&__unit
+			min-width: 60px
+		&__head
+			font-size: 30px
+		&__address
+			font-size: 12px
+		&__number
+			font-size: 30px
+	.insta
+		&__logo
+			width: 90%
+		&__unit
+			height: 100px
+	.social-links--text-link
+		flex-direction: column
