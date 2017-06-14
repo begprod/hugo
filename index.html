@@ -19,7 +19,7 @@
   </head>
   <body>
 
-    <div class="grid">
+    <div id="top" class="grid">
         <header class="header">
             <div class="wrapper">
                 <div class="header__unit header__social-links">
@@ -72,9 +72,9 @@
         </header>
         <section class="hero">
             <img class="hero__text" src="./images/hero-text.png" alt="fucking jump">
-            <i class="hero__down-link fa fa-chevron-down" aria-hidden="true"></i>
+            <i class="hero__down-link fa fa-chevron-down js-anchor" aria-hidden="true" data-to-scroll="#fm"></i>
         </section>
-        <section class="featured-music">
+        <section id="fm" class="featured-music">
             <div class="featured-music__unit">
                 <div class="featured-music__inner">
                     <h3 class="featured-music__head">Featured Album</h3>
@@ -181,7 +181,7 @@
         </footer>
     </div>
 
-    <div class="up-btn">
+    <div class="up-btn js-anchor" data-to-scroll="#top">
         <i class="fa fa-chevron-up" aria-hidden="true"></i>
     </div>
     <script src="https://yastatic.net/browser-updater/v1/script.js" charset="utf-8"></script><script>var yaBrowserUpdater = new ya.browserUpdater.init({"lang":"en","browsers":{"yabrowser":"15.12","chrome":"54","ie":"10","opera":"41","safari":"8","fx":"49","iron":"35","flock":"Infinity","palemoon":"25","camino":"Infinity","maxthon":"4.5","seamonkey":"2.3"},"theme":"red"});</script>

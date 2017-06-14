@@ -3,7 +3,8 @@ $(document).ready(function() {
     createBgfromAlbum();
 	countDownTimer();
 	getPhotoData();
-	upBtn();
+	showUpBtn();
+	anchorScroll();
 });
 
 
@@ -69,19 +70,24 @@ function getPhotoData() {
 	);
 }
 
-function upBtn() {
+function showUpBtn() {
 	var scrollBtn = $('.up-btn');
-	var bodyHtml = $('body, html');
-	scrollBtn.click(function (event) {
-		bodyHtml.animate({ scrollTop: 0 }, 400);
-		return false;
-	});
-
 	$(window).scroll(function () {
 		if ($(document).scrollTop() > 400) {
 			scrollBtn.fadeIn(300);
 		} else {
 			scrollBtn.fadeOut(300);
 		}
+	});
+}
+
+
+function anchorScroll() {
+	var anchorEl = $('.js-anchor');
+	anchorEl.click(function () {
+		var getScrollEl = $(this).attr('data-to-scroll');
+		$('html, body').animate({
+			scrollTop: $(getScrollEl).offset().top
+		}, 800);
 	});
 }
