@@ -57,7 +57,7 @@ function countDownTimer() {
 
 function getPhotoData() {
 	var photoBlock = $('.insta');
-	$.getJSON('../photo-data.json', function(data) {
+	$.getJSON('photo-data.json', function(data) {
 			for(var i = 0; i < 12; i++) {
 				//console.log(data[i].url);
 				photoBlock.append(
